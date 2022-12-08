@@ -18,7 +18,7 @@
   "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tytydraco/zepp-device-types-v1"
+    "url": "https://github.com/tytydraco/zeppos-device-types-v1"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
