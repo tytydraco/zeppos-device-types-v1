@@ -12,14 +12,16 @@ declare namespace HmWearableProgram {
         distance: [IHmSensorOptions, IHmSensorWidget]
         stand: [IHmSensorOptions, IHmSensorWidget]
         weather: [IHmSensorOptions, IHmSensorWidget]
-        activity: [IHmSensorOptions, IHmSensorWidget]
         fatButting: [IHmSensorOptions, IHmSensorWidget]
-        sun: [IHmSensorOptions, IHmSensorWidget]
-        wind: [IHmSensorOptions, IHmSensorWidget]
-        pressure: [IHmSensorOptions, IHmSensorWidget]
         spo2: [IHmSensorOptions, IHmSensorWidget]
         bodyTemp: [IHmSensorOptions, IHmSensorWidget]
         stress: [IHmSensorOptions, IHmSensorWidget]
+
+        /* --- Undocumented --- */
+        activity: [IHmSensorOptions, IHmSensorWidget]
+        sun: [IHmSensorOptions, IHmSensorWidget]
+        wind: [IHmSensorOptions, IHmSensorWidget]
+        pressure: [IHmSensorOptions, IHmSensorWidget]
       }
 
       type ISensorWidgetFactory = {

@@ -645,6 +645,128 @@ declare namespace HmWearableProgram {
         name: string
       }
 
+      // histogram
+      type HistogramOptions = extendsBase<
+        {
+          attrs: {
+            data_min_value: number
+            data_max_value: number
+            data_array: Array<number>
+            data_count: number
+            xline: {
+              padding: number
+              space: number
+              start: number
+              end: number
+              width: number
+              count: number
+              color: number
+            }
+            xText: {
+              x: number
+              y: number
+              w: number
+              h: number
+              space: number
+              color: number
+              data_array: Array<string>
+              count: number
+            }
+            yline: {
+              padding: number
+              space: number
+              start: number
+              end: number
+              width: number
+              count: number
+              color: number
+            }
+            yText: {
+              x: number
+              y: number
+              w: number
+              h: number
+              space: number
+              color: number
+              data_array: Array<string>
+              count: number
+            }
+          }
+          styles: {
+            x: number
+            y: number
+            w: number
+            h: number
+            item_width: number
+            item_space: number
+            item_radius: number
+            item_start_y?: number
+            item_max_height?: number
+            item_color: number
+          }
+        },
+        IHmUIWidgetOptions
+      >
+
+      interface HistogramWidget extends IHmUIWidget {
+        // pass
+        name: string
+      }
+
+      // pickdate
+      type PickDateOptions = extendsBase<
+        {
+          attrs: {
+            startYear?: number
+            endYear?: number
+            initYear?: number
+            initMonth?: number
+            initDay?: number
+            initHour?: number
+            initMin?: number
+          }
+          styles: {
+            x: number
+            y: number
+            w?: number
+            padding_1?: number
+            padding_2?: number
+            font_size?: number
+          }
+        },
+        IHmUIWidgetOptions
+      >
+
+      interface PickDateWidget extends IHmUIWidget {
+        // pass
+        name: string
+      }
+
+      // qrcode
+      type QRCodeOptions = extendsBase<
+        {
+          attrs: {
+            content: string
+          }
+          styles: {
+            x: number
+            y: number
+            w: number
+            h: number
+            bg_x?: number
+            bg_y?: number
+            bg_w?: number
+            bg_h?: number
+          }
+        },
+        IHmUIWidgetOptions
+      >
+
+      interface QRCodeWidget extends IHmUIWidget {
+        // pass
+        name: string
+      }
+
       interface HmUITagWidgetMap {
         // 控件
         group: [GroupWidgetOptions, GroupWidget]
@@ -676,6 +798,10 @@ declare namespace HmWearableProgram {
         fillRect: [FillRectWidgetOptions, FillRectWidget]
         circle: [CircleWidgetOptions, CircleWidget]
         dialog: [DialogWidgetOptions, DialogWidget]
+
+        histogram: [HistogramOptions, HistogramWidget]
+        pickDate: [PickDateOptions, PickDateWidget]
+        qrcode: [QRCodeOptions, QRCodeWidget]
       }
 
       type IWidgetFactory = {

@@ -16,7 +16,7 @@ declare namespace HmWearableProgram {
         weight: number
         gender: number
         nickName: string
-        region: strin
+        region: string
       }
 
       interface IHmSettingDiskInfo {
