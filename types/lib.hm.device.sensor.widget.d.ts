@@ -16,6 +16,11 @@ declare namespace HmWearableProgram {
         spo2: [IHmSensorOptions, IHmSensorWidget]
         bodyTemp: [IHmSensorOptions, IHmSensorWidget]
         stress: [IHmSensorOptions, IHmSensorWidget]
+        vibrate: [IHmSensorOptions, IHmSensorWidget]
+        wear: [IHmSensorOptions, IHmSensorWidget]
+        worldClock: [IHmSensorOptions, IHmSensorWidget]
+        sleep: [IHmSensorOptions, IHmSensorWidget]
+        music: [IHmSensorOptions, IHmSensorWidget]
 
         /* --- Undocumented --- */
         activity: [IHmSensorOptions, IHmSensorWidget]
