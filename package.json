@@ -1,7 +1,7 @@
 {
   "name": "zeppos-device-types-v1",
-  "version": "1.0.3",
-  "description": "device-types",
+  "version": "1.0.4",
+  "description": " Fixed API v1.0.0 declarations for @zepp/device-types.",
   "keywords": [
     "lib"
   ],
@@ -14,14 +14,12 @@
     }
   ],
   "license": "BSD-2-Clause",
-  "main": "index.d.ts",
-  "types": "index.d.ts",
+  "types": "./types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/tytydraco/zeppos-device-types-v1"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "gitHead": "9e83937ef00c6db0ba53cacd74886fe40d2ab5d9"
+  }
 }
