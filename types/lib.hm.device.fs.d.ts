@@ -3,8 +3,11 @@ declare namespace HmWearableProgram {
     namespace FS {
       interface IHmFsFlagType {
         O_RDONLY: number
+        O_WRONLY: number
         O_RDWR: number
+        O_APPEND: number
         O_CREAT: number
+        O_EXCL: number
         O_TRUNC: number
         SEEK_SET: number
       }
