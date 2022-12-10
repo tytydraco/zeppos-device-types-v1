@@ -102,7 +102,7 @@ declare namespace HmWearableProgram {
         getVisibility(): boolean
         setVisibility(show: boolean): boolean
         setEnable(response: boolean): void
-        
+
       }
 
       type HmUIWidgetOptions = Record<
@@ -124,18 +124,8 @@ declare namespace HmWearableProgram {
       interface IHmUIFunction {
         createWidget(widgetType: HmUIWidgetType, options: HmUIWidgetOptions): IHmUIWidget
         deleteWidget(widget: IHmUIWidget): boolean
-        appContext: DeviceSide.AppContext.HmAppContext
-        moduleContext: DeviceSide.AppContext.HmAppModule
-      }
 
-      interface IHmUIDialogType {
-        show(isShow: boolean): void
-      }
-
-      interface IHmUIExtensionFunction {
         getTextLayout: IHmUIGetTextLayout
-        getRtlLayout(): boolean
-        relayoutRtl(): void
         showToast(options: { text: string }): void
         createDialog(options: {
           title: string
@@ -149,6 +139,13 @@ declare namespace HmWearableProgram {
         getScrollCurrentPage(): undefined | number
         setStatusBarVisible(visible: boolean): void
         updateStatusBarTitle(title: string): void
+
+        appContext: DeviceSide.AppContext.HmAppContext
+        moduleContext: DeviceSide.AppContext.HmAppModule
+      }
+
+      interface IHmUIDialogType {
+        show(isShow: boolean): void
       }
 
       interface IHmUIAlign {

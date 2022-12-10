@@ -3,11 +3,14 @@ declare namespace HmWearableProgram {
     namespace AppRouter {
       interface IHmAppStartParams {
         appid: number
+        url: string
+        native?: boolean
+        param?: string
       }
 
       interface IHmAppGoToParams {
-        file: string
-        params: string
+        url: string
+        param?: string
       }
 
       interface IHmAppGestureEvent {
@@ -25,7 +28,7 @@ declare namespace HmWearableProgram {
         DOWN: number
         SHORTCUT: number
       }
-      
+
       interface IHmAppAction {
         CLICK: number
         LONG_PRESS: number
@@ -35,21 +38,20 @@ declare namespace HmWearableProgram {
       }
 
       interface IHmAppPackageInfo {
-        appId: number
-        appName: string
-        appType: string
-        version: object
+        name: string
+        type: string
+        version: { code: number, name: string }
         icon: string
-        vender: string
-        venderId: string
-        cover: Array<string>
+        appId: number
         description: string
+        vender: string
+        pages: Array<string>
       }
 
       interface IHmAppFunction {
         startApp(params: IHmAppStartParams): void
         gotoPage(params: IHmAppGoToParams): void
-        reloadPage(option: { url: string, param?: string }): void
+        reloadPage(option: IHmAppGoToParams): void
         setLayerY(offset: number): void
         getLayerY(): number
         gotoHome(): void
