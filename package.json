@@ -1,6 +1,6 @@
 {
   "name": "zeppos-device-types-v1",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": " Fixed API v1.0.0 declarations for @zepp/device-types.",
   "keywords": [
     "lib"

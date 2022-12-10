@@ -10,6 +10,8 @@ declare namespace HmWearableProgram {
         O_EXCL: number
         O_TRUNC: number
         SEEK_SET: number
+        SEEK_CUR: number
+        SEEK_END: number
       }
 
       interface IHmFsStat {
