@@ -29,6 +29,7 @@ declare namespace HmWearableProgram {
       }
 
       interface IHmSensorEventType {
+        [k: string]: number
         UPDATE: number
         CHANGE: number
       }
