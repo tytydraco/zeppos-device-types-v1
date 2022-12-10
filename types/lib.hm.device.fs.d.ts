@@ -2,6 +2,7 @@ declare namespace HmWearableProgram {
   namespace DeviceSide {
     namespace FS {
       interface IHmFsFlagType {
+        O_RDONLY: number
         O_RDWR: number
         O_CREAT: number
         O_TRUNC: number
@@ -24,7 +25,7 @@ declare namespace HmWearableProgram {
         write: (fd: number, pos: number, buff: ArrayBuffer, len: number | undefined) => number
         remove: (name: string) => number
         rename: (name: string, new_name: string) => number
-        
+
         SysProSetBool(key: string, val: boolean): number
         SysProGetBool(key: string): boolean
         SysProSetInt(key: string, val: number): number
@@ -35,13 +36,13 @@ declare namespace HmWearableProgram {
         SysProGetDouble(key: string): number
         SysProSetChars(key: string, val: string): number
         SysProGetChars(key: string): string
-        
+
         /* --- Undocumented --- */
         mkdir: (name: string) => number
         readdir: (name: string) => [IHmFsStat, number]
       }
 
-      interface IHmFs extends IHmFsFlagType, IHmFsFunction {}
+      interface IHmFs extends IHmFsFlagType, IHmFsFunction { }
     }
   }
 }
